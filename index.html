@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenSigma Community Performance Showcase</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo"><span class="logo-dot"></span>GreenSigma</div>
+  <div class="nav-links">
+    <a href="#community">Community</a>
+    <a href="#portfolio-links">Portfolio Showcase</a>
+    <a href="#snapshots">Verified P&amp;L</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-eye">Community Performance Showcase</div>
+  <h1>Real Investors. Real Portfolios. <span>Real Results.</span></h1>
+  <p>Explore verified portfolio snapshots shared by GreenSigma community members following systematic investing approaches.</p>
+  <div class="badges">
+    <div class="badge"><span class="badge-ck">✓</span> Verified Portfolio Links</div>
+    <div class="badge"><span class="badge-ck">✓</span> Community Driven</div>
+    <div class="badge"><span class="badge-ck">✓</span> Transparent Performance Sharing</div>
+  </div>
+</section>
+
+<div class="controls" id="community">
+  <div class="sw">
+    <span class="si">🔍</span>
+    <input type="text" id="searchQ" placeholder="Search by username…" oninput="doSearch()">
+  </div>
+  <div class="ftabs">
+    <button class="fbtn on" onclick="doFilter('all',this)">All</button>
+    <button class="fbtn" onclick="doFilter('link',this)">Verified Links</button>
+    <button class="fbtn" onclick="doFilter('snapshot',this)">Snapshots</button>
+  </div>
+</div>
+
+<section class="section" id="portfolio-links">
+  <div class="sec-hd fin">
+    <div class="sec-lbl">Verified Portfolio Links</div>
+    <div class="sec-ttl">Live Verified Portfolio Links</div>
+    <div class="sec-sub">Community members who have shared their live verified portfolio links.</div>
+  </div>
+  <div class="grid" id="linksGrid"></div>
+</section>
+
+<hr class="div">
+
+<section class="section" id="snapshots">
+  <div class="sec-hd fin">
+    <div class="sec-lbl">Portfolio Snapshots</div>
+    <div class="sec-ttl">Progress Snapshots</div>
+    <div class="sec-sub">Community members who have shared portfolio screenshots and progress snapshots.</div>
+  </div>
+  <div class="grid" id="snapsGrid"></div>
+</section>
+
+<div class="trust-sec">
+  <div class="sec-hd fin">
+    <div class="sec-lbl">Why We Share</div>
+    <div class="sec-ttl">Why Community Members Share Their Portfolios</div>
+  </div>
+  <div class="tgrid">
+    <div class="tcard fin"><div class="ticon">🔍</div><h3>Transparency</h3><p>Community members voluntarily share verified performance — no hand-picking, no cherry-picking.</p></div>
+    <div class="tcard fin"><div class="ticon">📐</div><h3>Systematic Investing</h3><p>Focus on process and disciplined portfolio management driven by consistent, rule-based strategies.</p></div>
+    <div class="tcard fin"><div class="ticon">🤝</div><h3>Learning Together</h3><p>Every shared portfolio becomes a learning opportunity. The community grows stronger together.</p></div>
+  </div>
+</div>
+
+<footer>
+  <div><div class="fn">GreenSigma Community Portfolio Showcase</div><div class="ft">Built on transparency, systematic investing, and community learning.</div></div>
+  <div class="fc">© 2026 GreenSigma Consultancy Pvt. Ltd.</div>
+</footer>
+
+<!-- VIEW MODAL -->
+<div class="mov" id="viewMov" onclick="if(event.target===this)closeView()">
+  <div class="mbox">
+    <div class="mh"><div class="mt" id="viewTitle">Portfolio Snapshot</div><button class="mc" onclick="closeView()">✕</button></div>
+    <div class="mb"><img id="viewImg" src="" alt="snapshot"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
