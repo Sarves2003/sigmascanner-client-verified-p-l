@@ -10,10 +10,11 @@
 
 <nav>
   <div class="logo"><span class="logo-dot"></span>GreenSigma</div>
-  <div class="nav-links">
-    <a href="#community">Community</a>
-    <a href="#portfolio-links">Portfolio Showcase</a>
-    <a href="#snapshots">Verified P&amp;L</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" onclick="toggleNav()">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="#community" onclick="closeNav()">Community</a>
+    <a href="#portfolio-links" onclick="closeNav()">Portfolio Showcase</a>
+    <a href="#snapshots" onclick="closeNav()">Verified P&amp;L</a>
   </div>
 </nav>
 

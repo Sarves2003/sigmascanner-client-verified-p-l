@@ -94,6 +94,16 @@ function doFilter(t,btn){
   applyFilterSearch();
 }
 
+// NAV
+function toggleNav(){
+  const open=document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('navToggle').setAttribute('aria-expanded',open);
+}
+function closeNav(){
+  document.getElementById('navLinks').classList.remove('open');
+  document.getElementById('navToggle').setAttribute('aria-expanded','false');
+}
+
 // TOAST
 let tt;
 function toast(msg){
