@@ -3,86 +3,245 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GreenSigma Community Performance Showcase</title>
+<title>GreenSigma — Verified Community P&amp;L</title>
+<meta name="description" content="Real, broker-verified portfolio links and P&L snapshots voluntarily shared by GreenSigma community members. Transparent, systematic, community-driven.">
+<meta name="theme-color" content="#F7F9FB">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 22'%3E%3Crect x='1' y='13' width='5' height='9' rx='1.2' fill='%2312A76C'/%3E%3Crect x='9.5' y='7' width='5' height='15' rx='1.2' fill='%2312A76C'/%3E%3Crect x='18' y='0' width='5' height='22' rx='1.2' fill='%2312A76C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.setAttribute('data-theme',(function(){try{return localStorage.getItem('gs-theme')||'light'}catch(e){return 'light'}})());</script>
 </head>
 <body>
 
-<nav>
-  <div class="logo"><span class="logo-dot"></span>GreenSigma</div>
-  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" onclick="toggleNav()">☰</button>
-  <div class="nav-links" id="navLinks">
-    <a href="#community" onclick="closeNav()">Community</a>
-    <a href="#portfolio-links" onclick="closeNav()">Portfolio Showcase</a>
-    <a href="#snapshots" onclick="closeNav()">Verified P&amp;L</a>
+<nav id="topNav">
+  <div class="wrap nav-in">
+    <div class="logo">
+      <img class="logo-img logo-on-light" src="assets/logo-light.png" alt="sigma scanner" onerror="logoErr(this)">
+      <img class="logo-img logo-on-dark" src="assets/logo-dark.png" alt="" onerror="logoErr(this)">
+      <span class="logo-fb">
+        <svg class="logo-icon" viewBox="0 0 24 22" width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="13" width="5" height="9" rx="1.2" fill="currentColor"/>
+          <rect x="9.5" y="7" width="5" height="15" rx="1.2" fill="currentColor"/>
+          <rect x="18" y="0" width="5" height="22" rx="1.2" fill="currentColor"/>
+        </svg>
+        <span class="logo-text">sigma<span class="logo-accent">scanner</span></span>
+      </span>
+    </div>
+    <div class="nav-right">
+      <div class="nav-links" id="navLinks">
+        <a href="#snapshots" onclick="closeNav()">Verified P&amp;L</a>
+        <a href="https://t.me/+SemAwdalPNliMWQ1" target="_blank" rel="noopener" onclick="closeNav()">Community</a>
+      </div>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark / light theme" onclick="toggleTheme()"></button>
+      <a class="btn btn-solid btn-nav" href="https://t.me/+SemAwdalPNliMWQ1" target="_blank" rel="noopener"><span class="jc-full">Join Community</span><span class="jc-short">Join</span></a>
+      <button class="icon-btn nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" onclick="toggleNav()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
   </div>
 </nav>
 
-<section class="hero">
-  <div class="hero-eye">Community Performance Showcase</div>
-  <h1>Real Investors. Real Portfolios. <span>Real Results.</span></h1>
-  <p>Explore verified portfolio snapshots shared by GreenSigma community members following systematic investing approaches.</p>
-  <div class="badges">
-    <div class="badge"><span class="badge-ck">✓</span> Verified Portfolio Links</div>
-    <div class="badge"><span class="badge-ck">✓</span> Community Driven</div>
-    <div class="badge"><span class="badge-ck">✓</span> Transparent Performance Sharing</div>
+<header class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <svg class="hero-chart" viewBox="0 0 1440 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="heroFill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="currentColor" stop-opacity="0.16"/>
+          <stop offset="100%" stop-color="currentColor" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <g fill="currentColor" opacity="0.10">
+        <rect x="1020" y="230" width="34" height="70" rx="4"/>
+        <rect x="1090" y="205" width="34" height="95" rx="4"/>
+        <rect x="1160" y="215" width="34" height="85" rx="4"/>
+        <rect x="1230" y="170" width="34" height="130" rx="4"/>
+        <rect x="1300" y="140" width="34" height="160" rx="4"/>
+        <rect x="1370" y="100" width="34" height="200" rx="4"/>
+      </g>
+      <path d="M0,258 L140,242 L260,252 L380,215 L500,226 L620,185 L760,199 L880,150 L1000,164 L1120,110 L1240,124 L1360,70 L1440,56 L1440,300 L0,300 Z" fill="url(#heroFill)"/>
+      <path d="M0,258 L140,242 L260,252 L380,215 L500,226 L620,185 L760,199 L880,150 L1000,164 L1120,110 L1240,124 L1360,70 L1440,56" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+      <g fill="currentColor">
+        <circle cx="380" cy="215" r="4"/>
+        <circle cx="620" cy="185" r="4"/>
+        <circle cx="880" cy="150" r="4"/>
+        <circle cx="1120" cy="110" r="4"/>
+        <circle cx="1360" cy="70" r="14" opacity="0.15"/>
+        <circle cx="1360" cy="70" r="5"/>
+      </g>
+    </svg>
+  </div>
+  <div class="hero-card hero-card-l" aria-hidden="true">
+    <div class="hc-ic">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+    </div>
+    <div>
+      <div class="hc-t">Verified P&amp;L</div>
+      <div class="hc-s">Broker-hosted links</div>
+    </div>
+  </div>
+  <div class="hero-card hero-card-r" aria-hidden="true">
+    <svg class="hc-spark" width="46" height="28" viewBox="0 0 46 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polyline points="2,24 11,18 19,21 29,10 36,13 43,4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="43" cy="4" r="3" fill="currentColor"/>
+    </svg>
+    <div>
+      <div class="hc-t">Systematic momentum</div>
+      <div class="hc-s">Rule-based investing</div>
+    </div>
+  </div>
+  <div class="wrap hero-in">
+    <div class="hero-eye"><span class="dot"></span>Community-Verified Performance</div>
+    <h1>Real investors. Real portfolios.<br><span>Verified results.</span></h1>
+    <p class="hero-sub">Live broker-verified portfolio links and P&amp;L snapshots voluntarily shared by GreenSigma community members — transparent, systematic, and open for anyone to audit.</p>
+    <div class="hero-cta">
+      <a href="#results" class="btn btn-solid btn-lg">Explore Verified P&amp;L</a>
+      <a href="https://t.me/+SemAwdalPNliMWQ1" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">Join the Community
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- STATS BAND — hidden until actual numbers are available.
+     To show it again, just uncomment this section: the numbers
+     (members / links / snapshots / capital) are computed automatically
+     from the entries in js/data.js.
+<section class="stats">
+  <div class="wrap stats-in" id="statsRow"></div>
+</section>
+-->
+
+<section class="section pb-half" id="results">
+  <div class="wrap">
+    <div class="res-head fin">
+      <div class="res-head-txt">
+        <div class="sec-lbl">Verified Portfolios</div>
+        <h2 class="sec-ttl">Live Verified Portfolio Links</h2>
+        <p class="sec-sub">Broker-hosted verified pages — open any portfolio and audit the numbers yourself.</p>
+      </div>
+      <div class="controls">
+        <div class="sw">
+          <svg class="si" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="text" id="searchQ" placeholder="Search members…" oninput="doSearch()">
+        </div>
+        <div class="ftabs">
+          <button class="fbtn on" onclick="doFilter('all',this)">All</button>
+          <button class="fbtn" onclick="doFilter('link',this)">Live Links</button>
+          <button class="fbtn" onclick="doFilter('snapshot',this)">Snapshots</button>
+        </div>
+      </div>
+    </div>
+    <div class="grid" id="linksGrid"></div>
   </div>
 </section>
 
-<div class="controls" id="community">
-  <div class="sw">
-    <span class="si">🔍</span>
-    <input type="text" id="searchQ" placeholder="Search by username…" oninput="doSearch()">
+<section class="section pt-half" id="snapshots">
+  <div class="wrap">
+    <div class="sec-hd fin">
+      <div class="sec-lbl">Verified P&amp;L</div>
+      <h2 class="sec-ttl">P&amp;L Snapshots</h2>
+      <p class="sec-sub">Realized performance screenshots shared by members from their trading and broker platforms.</p>
+    </div>
+    <div class="grid snaps" id="snapsGrid"></div>
   </div>
-  <div class="ftabs">
-    <button class="fbtn on" onclick="doFilter('all',this)">All</button>
-    <button class="fbtn" onclick="doFilter('link',this)">Verified Links</button>
-    <button class="fbtn" onclick="doFilter('snapshot',this)">Snapshots</button>
-  </div>
-</div>
-
-<section class="section" id="portfolio-links">
-  <div class="sec-hd fin">
-    <div class="sec-lbl">Verified Portfolio Links</div>
-    <div class="sec-ttl">Live Verified Portfolio Links</div>
-    <div class="sec-sub">Community members who have shared their live verified portfolio links.</div>
-  </div>
-  <div class="grid" id="linksGrid"></div>
 </section>
 
-<hr class="div">
-
-<section class="section" id="snapshots">
-  <div class="sec-hd fin">
-    <div class="sec-lbl">Portfolio Snapshots</div>
-    <div class="sec-ttl">Progress Snapshots</div>
-    <div class="sec-sub">Community members who have shared portfolio screenshots and progress snapshots.</div>
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="sec-hd fin">
+      <div class="sec-lbl">Why We Share</div>
+      <h2 class="sec-ttl">Built on transparency, not promises</h2>
+    </div>
+    <div class="tgrid">
+      <div class="tcard fin">
+        <div class="ticon ti-green"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Verified, not claimed</h3>
+        <p>Members share broker-verified links and real screenshots — performance you can open and check, not marketing numbers.</p>
+      </div>
+      <div class="tcard fin">
+        <div class="ticon ti-blue"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+        <h3>Systematic investing</h3>
+        <p>Every portfolio follows a disciplined, rule-based process — consistency over prediction, process over emotion.</p>
+      </div>
+      <div class="tcard fin">
+        <div class="ticon ti-navy"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Learning together</h3>
+        <p>Wins and losses are shared openly, so every result becomes something the whole community learns from.</p>
+      </div>
+    </div>
   </div>
-  <div class="grid" id="snapsGrid"></div>
 </section>
 
-<div class="trust-sec">
-  <div class="sec-hd fin">
-    <div class="sec-lbl">Why We Share</div>
-    <div class="sec-ttl">Why Community Members Share Their Portfolios</div>
+<section class="section" id="testimonials">
+  <div class="wrap">
+    <div class="sec-hd fin">
+      <div class="sec-lbl">Community Voices</div>
+      <h2 class="sec-ttl">What members say</h2>
+      <p class="sec-sub">Our ultimate goal is to help individual retail investors become independent quant investors.</p>
+    </div>
+    <div class="qgrid" id="testiGrid"></div>
   </div>
-  <div class="tgrid">
-    <div class="tcard fin"><div class="ticon">🔍</div><h3>Transparency</h3><p>Community members voluntarily share verified performance — no hand-picking, no cherry-picking.</p></div>
-    <div class="tcard fin"><div class="ticon">📐</div><h3>Systematic Investing</h3><p>Focus on process and disciplined portfolio management driven by consistent, rule-based strategies.</p></div>
-    <div class="tcard fin"><div class="ticon">🤝</div><h3>Learning Together</h3><p>Every shared portfolio becomes a learning opportunity. The community grows stronger together.</p></div>
+</section>
+
+<section class="section pt0">
+  <div class="wrap">
+    <div class="cta-band fin">
+      <h2>Trade with process, not guesswork.</h2>
+      <p>Join a community of investors following systematic, transparent strategies — and see every result verified.</p>
+      <a class="btn btn-brand btn-lg" href="https://t.me/+SemAwdalPNliMWQ1" target="_blank" rel="noopener">Join the GreenSigma Community</a>
+      <div class="cta-note">Trusted by 5,000+ investors</div>
+    </div>
   </div>
-</div>
+</section>
 
 <footer>
-  <div><div class="fn">GreenSigma Community Portfolio Showcase</div><div class="ft">Built on transparency, systematic investing, and community learning.</div></div>
-  <div class="fc">© 2026 GreenSigma Consultancy Pvt. Ltd.</div>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <div class="logo">
+          <img class="logo-img logo-on-light" src="assets/logo-light.png" alt="sigma scanner" onerror="logoErr(this)">
+          <img class="logo-img logo-on-dark" src="assets/logo-dark.png" alt="" onerror="logoErr(this)">
+          <span class="logo-fb">
+            <svg class="logo-icon" viewBox="0 0 24 22" width="20" height="18" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="13" width="5" height="9" rx="1.2" fill="currentColor"/>
+              <rect x="9.5" y="7" width="5" height="15" rx="1.2" fill="currentColor"/>
+              <rect x="18" y="0" width="5" height="22" rx="1.2" fill="currentColor"/>
+            </svg>
+            <span class="logo-text">sigma<span class="logo-accent">scanner</span></span>
+          </span>
+        </div>
+        <p>Community performance showcase — built on transparency, systematic investing, and shared learning.</p>
+      </div>
+      <div class="f-col">
+        <div class="f-h">Explore</div>
+        <a href="#results">Live Portfolios</a>
+        <a href="#snapshots">Verified P&amp;L</a>
+        <a href="https://t.me/+SemAwdalPNliMWQ1" target="_blank" rel="noopener">Telegram Community</a>
+      </div>
+      <div class="f-col f-disc">
+        <div class="f-h">Disclosure</div>
+        <p>All performance shown is voluntarily shared by community members through broker-verified links or screenshots. Past performance is not indicative of future results. Nothing on this page is investment advice.</p>
+      </div>
+    </div>
+    <div class="f-bot">
+      <span>© 2026 GreenSigma Consultancy Pvt. Ltd.</span>
+      <span>Made for transparency.</span>
+    </div>
+  </div>
 </footer>
 
 <!-- VIEW MODAL -->
 <div class="mov" id="viewMov" onclick="if(event.target===this)closeView()">
   <div class="mbox">
-    <div class="mh"><div class="mt" id="viewTitle">Portfolio Snapshot</div><button class="mc" onclick="closeView()">✕</button></div>
-    <div class="mb"><img id="viewImg" src="" alt="snapshot"></div>
+    <div class="mh">
+      <div class="mt" id="viewTitle">Verified P&amp;L</div>
+      <button class="mc" onclick="closeView()" aria-label="Close">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="mb"><img id="viewImg" src="" alt="Verified P&L snapshot"></div>
   </div>
 </div>
 
