@@ -257,6 +257,7 @@ nav.scrolled{border-color:var(--border);box-shadow:0 8px 24px rgba(16,24,40,0.05
 .qmark{font-size:2.2rem;font-weight:800;line-height:0.6;color:var(--border-strong);font-family:Georgia,serif}
 .qtext{font-size:0.93rem;line-height:1.75;color:var(--text-2);flex:1}
 .q-foot{display:flex;align-items:center;gap:10px}
+.qicon{width:38px;height:38px;border-radius:50%;background:var(--brand-soft);color:var(--brand-deep);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .qwho{font-size:0.85rem;font-weight:600;color:var(--text)}
 .qwho span{display:block;font-weight:500;color:var(--text-3);margin-top:2px;font-size:0.75rem}
 

@@ -13,6 +13,12 @@ const I={
   moon:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>'
 };
 
+/* ---------- TESTIMONIAL ICON ---------- */
+/* Single consistent quote badge for every qcard — not a user avatar. */
+const QI={
+  quote:'<svg width="16" height="16" viewBox="0 0 512 512" fill="currentColor"><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 216z"/></svg>'
+};
+
 function ini(n){return n.trim().split(' ').map(w=>w[0]||'').join('').toUpperCase().slice(0,2)||'?'}
 
 /* Logo images missing → fall back to the inline SVG wordmark */
@@ -152,7 +158,7 @@ function renderTestimonials(){
       <div class="qmark">“</div>
       <div class="qtext">${t.quote}</div>
       <div class="q-foot">
-        <div class="ava ava-sm">${ini(t.who)}</div>
+        <div class="qicon">${QI.quote}</div>
         <div class="qwho">${t.who}${t.since?`<span>${t.since}</span>`:''}</div>
       </div>
     </div>`).join('');
