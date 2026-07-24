@@ -123,6 +123,8 @@ nav.scrolled{border-color:var(--border);box-shadow:0 8px 24px rgba(16,24,40,0.05
 .hero h1 span{color:var(--brand-deep)}
 .hero-sub{font-size:1.05rem;color:var(--text-2);max-width:620px;margin:0 auto 40px;line-height:1.7}
 .hero-cta{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.tp-rating{display:inline-flex;align-items:center;gap:4px;font-weight:700;color:#FFDF00}
+.tp-star{flex-shrink:0}
 
 /* ---------- STATS ---------- */
 .stats{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);transition:background .3s}
@@ -207,6 +209,26 @@ nav.scrolled{border-color:var(--border);box-shadow:0 8px 24px rgba(16,24,40,0.05
 .tcard h3{font-size:1rem;font-weight:700;margin-bottom:8px;letter-spacing:-0.01em}
 .tcard p{font-size:0.87rem;color:var(--text-2);line-height:1.7}
 
+/* ---------- VIDEO TESTIMONIALS ---------- */
+.vt-stage{display:flex;align-items:center;gap:16px}
+.vt-arrow{flex:0 0 auto;width:40px;height:40px;border-radius:50%;border:1px solid var(--border);background:var(--surface);color:var(--text-2);box-shadow:var(--shadow-sm);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s,border-color .2s,opacity .2s}
+.vt-arrow:hover:not(:disabled){background:var(--surface-2);color:var(--text);border-color:var(--border-strong)}
+.vt-arrow:disabled{opacity:.35;cursor:default}
+.vt-track-viewport{flex:1;overflow:hidden}
+.vt-track{display:flex;gap:20px;transition:transform .45s cubic-bezier(.22,.9,.32,1)}
+.vt-card{flex:0 0 calc((100% - 40px)/3);max-width:calc((100% - 40px)/3);background:var(--surface);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow-sm);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .25s,border-color .2s,background .3s}
+.vt-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--border-strong)}
+.vt-media{position:relative;width:100%;aspect-ratio:9/16;background:var(--surface-2);overflow:hidden}
+.vt-media iframe{width:100%;height:100%;border:none}
+.vt-play-btn{position:absolute;inset:0;z-index:10;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.25);cursor:pointer;transition:background .2s ease}
+.vt-media:hover .vt-play-btn{background:rgba(0,0,0,0.35)}
+.vt-play-circle{width:60px;height:60px;border-radius:50%;background:var(--brand);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-lg)}
+.vt-play-circle::after{content:'';border-style:solid;border-width:11px 0 11px 18px;border-color:transparent transparent transparent #06140e;margin-left:3px}
+.vt-name{padding:14px 16px;font-weight:600;font-size:0.9rem;color:var(--text)}
+.vt-dots{display:flex;justify-content:center;gap:8px;margin-top:28px}
+.vt-dot{width:8px;height:8px;border-radius:50%;background:var(--border-strong);opacity:.6;cursor:pointer;border:none;padding:0;transition:width .2s ease,background .2s ease,opacity .2s ease}
+.vt-dot.is-active{opacity:1;background:var(--brand);width:22px;border-radius:5px}
+
 /* ---------- TESTIMONIALS ---------- */
 .qgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px}
 .qcard{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:18px;transition:transform .2s,box-shadow .25s,border-color .2s,background .3s}
@@ -268,6 +290,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:64px
   .hero-chart{height:220px}
   .section{padding:72px 0}
   .why{padding:72px 0}
+  .vt-card{flex:0 0 calc((100% - 20px)/2);max-width:calc((100% - 20px)/2)}
 }
 @media(max-width:768px){
   .nav-links{position:absolute;top:68px;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--border);flex-direction:column;align-items:stretch;gap:0;margin:0;max-height:0;overflow:hidden;transition:max-height .25s ease}
@@ -288,6 +311,9 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:64px
   .pb-half{padding-bottom:32px}
   .pt-half{padding-top:32px}
   .pt0{padding-top:0}
+  .vt-stage{gap:10px}
+  .vt-arrow{width:34px;height:34px}
+  .vt-card{flex:0 0 82%;max-width:82%}
 }
 @media(max-width:480px){
   .wrap{padding:0 16px}

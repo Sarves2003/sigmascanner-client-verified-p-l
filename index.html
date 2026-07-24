@@ -32,7 +32,7 @@
     <div class="nav-right">
       <div class="nav-links" id="navLinks">
         <a href="#snapshots" onclick="closeNav()">Verified P&amp;L</a>
-        <a href="https://t.me/+SemAwdalPNliMWQ1" target="_blank" rel="noopener" onclick="closeNav()">Community</a>
+        <a href="https://www.trustpilot.com/review/greensigma.in" target="_blank" rel="noopener" onclick="closeNav()">Trustpilot Reviews</a>
       </div>
       <button class="icon-btn" id="themeToggle" aria-label="Toggle dark / light theme" onclick="toggleTheme()"></button>
       <a class="btn btn-solid btn-nav" href="https://t.me/+SemAwdalPNliMWQ1" target="_blank" rel="noopener"><span class="jc-full">Join Community</span><span class="jc-short">Join</span></a>
@@ -97,8 +97,11 @@
     <p class="hero-sub">Live broker-verified portfolio links and P&amp;L snapshots voluntarily shared by GreenSigma community members — transparent, systematic, and open for anyone to audit.</p>
     <div class="hero-cta">
       <a href="#results" class="btn btn-solid btn-lg">Explore Verified P&amp;L</a>
-      <a href="https://t.me/+SemAwdalPNliMWQ1" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">Join the Community
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+      <a href="https://www.trustpilot.com/review/greensigma.in" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">Trustpilot Reviews
+        <span class="tp-rating">
+          <svg class="tp-star" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5l3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.27l-6.18 3.23L7 13.63l-5-4.87 6.91-1L12 1.5z"/></svg>
+          4.6
+        </span>
       </a>
     </div>
   </div>
@@ -174,6 +177,28 @@
   </div>
 </section>
 
+<section class="section pt-half" id="video-testimonials">
+  <div class="wrap">
+    <div class="sec-hd fin">
+      <div class="sec-lbl">In Their Own Words</div>
+      <h2 class="sec-ttl">Watch member testimonials</h2>
+      <p class="sec-sub">Real members sharing their GreenSigma journey, on camera.</p>
+    </div>
+    <div class="vt-stage fin">
+      <button class="vt-arrow vt-arrow-left" id="vtPrev" aria-label="Previous testimonial">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="vt-track-viewport">
+        <div class="vt-track" id="vtTrack"></div>
+      </div>
+      <button class="vt-arrow vt-arrow-right" id="vtNext" aria-label="Next testimonial">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+    <div class="vt-dots" id="vtDots"></div>
+  </div>
+</section>
+
 <section class="section" id="testimonials">
   <div class="wrap">
     <div class="sec-hd fin">
@@ -219,6 +244,7 @@
         <a href="#results">Live Portfolios</a>
         <a href="#snapshots">Verified P&amp;L</a>
         <a href="https://t.me/+SemAwdalPNliMWQ1" target="_blank" rel="noopener">Telegram Community</a>
+        <a href="https://www.trustpilot.com/review/greensigma.in" target="_blank" rel="noopener">Trustpilot Reviews</a>
       </div>
       <div class="f-col f-disc">
         <div class="f-h">Disclosure</div>
@@ -247,7 +273,9 @@
 
 <div class="toast" id="toast"></div>
 
+<script src="https://player.vimeo.com/api/player.js"></script>
 <script src="js/data.js"></script>
+<script src="js/video-testimonials.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

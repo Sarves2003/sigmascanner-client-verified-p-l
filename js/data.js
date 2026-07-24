@@ -59,3 +59,17 @@ const TESTIMONIALS = [
   { quote: 'It\'s an amazing momentum tribe, and using the scanner is very helpful for my trading journey — it saves my time and analysis, with huge returns from momentum stocks. Definitely I will recommend this mentorship to my friends, relatives and whoever is willing in the stock market.', who: 'Gokilakrishnan' },
   { quote: 'Excellent course to recommend for stock enthusiasts. Their support is brilliant — we can ask any questions without any hesitation. Green Sigma Scanner is a good tool to analyse stocks and find the best stocks. The time we spend in momentum investment is way lesser compared to other methods.', who: 'Sowmitha' }
 ];
+
+/*
+  VIDEO_TESTIMONIALS — Vimeo video IDs for member video testimonials.
+  Add/remove entries freely; set to an empty array [] to hide the whole section.
+  Optional: who:'...' shows a small name caption under the video.
+*/
+const VIDEO_TESTIMONIALS = [
+  { videoId: '1200675017' },
+  { videoId: '1202118218' },
+  { videoId: '1200675525' },
+  { videoId: '1200675540' },
+  { videoId: '1200675562' },
+  { videoId: '1200675626' }
+];
