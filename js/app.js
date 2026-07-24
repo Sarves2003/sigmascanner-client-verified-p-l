@@ -218,5 +218,5 @@ function toast(msg){
 }
 
 /* ---------- BOOT ---------- */
-applyTheme(document.documentElement.getAttribute('data-theme')||'dark');
+applyTheme(document.documentElement.getAttribute('data-theme')||'light');
 render();
